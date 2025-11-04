@@ -14,7 +14,7 @@ def logout():
     keys_to_clear = list(st.session_state.keys())
     for key in keys_to_clear:
         del st.session_state[key]
-    st.experimental_rerun()
+    # st.experimental_rerun()
 
 def check_access(allowed_roles):
     """Checks if the user is logged in."""
