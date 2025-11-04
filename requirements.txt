@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+nibabel
+matplotlib
+torch
+torchvision
+Pillow
+albumentations
+google-generativeai
