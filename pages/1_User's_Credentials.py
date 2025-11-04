@@ -19,7 +19,7 @@ def logout():
     for key in keys_to_clear:
         del st.session_state[key]
     st.success("You have been logged out.")
-    st.experimental_rerun()
+    st.rerun()
 
 # --- Main Page Logic ---
 if st.session_state.logged_in:
@@ -60,7 +60,7 @@ else:
                     }
                     st.session_state.session_log.append({"user": name, "action": "Login", "role": "Patient"})
                     st.success(f"Welcome, {name}! You are logged in as a Patient.")
-                    st.experimental_rerun()
+                    st.rerun()
 
     with tab2:
         st.header("Doctor Registration")
@@ -86,7 +86,7 @@ else:
                     }
                     st.session_state.session_log.append({"user": doc_name, "action": "Login", "role": "Doctor"})
                     st.success(f"Welcome, Dr. {doc_name}! You are logged in as a Doctor.")
-                    st.experimental_rerun()
+                    st.rerun()
 
     with tab3:
         st.header("Medical Institute Access")
@@ -110,4 +110,4 @@ else:
                     }
                     st.session_state.session_log.append({"user": institute_name_inst, "action": "Login", "role": "Institute"})
                     st.success(f"Welcome, {institute_name_inst}! You are logged in as an Institute.")
-                    st.experimental_rerun()
+                    st.rerun()
