@@ -19,7 +19,6 @@ def logout():
     for key in keys_to_clear:
         del st.session_state[key]
     st.success("You have been logged out.")
-    st.rerun()
 
 # --- Main Page Logic ---
 if st.session_state.logged_in:
